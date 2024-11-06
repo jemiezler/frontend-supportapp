@@ -33,7 +33,7 @@ export default function HomeScreen() {
       icon: "🔔", // Icon for Getting Started
       title: "Question about",
       text: "Getting Started",
-      route: "/chat" as Href, // Route for chat
+      route: "/chat" as Href<string>, // Route for chat
       backgroundColor: "#536493", // Background color for this category
     },
     {
@@ -41,7 +41,7 @@ export default function HomeScreen() {
       icon: "📱", // Icon for How to contact
       title: "Question about",
       text: "How to contact",
-      route: "/department" as Href, // Route for department
+      route: "/department" as Href<string>, // Route for department
       backgroundColor: "#629584", // Background color for this category
     },
     {
@@ -49,7 +49,7 @@ export default function HomeScreen() {
       icon: "💳", // Icon for Payments
       title: "Question about",
       text: "Payments",
-      route: "/payment" as Href, // Route for payments
+      route: "/payment" as Href<string>, // Route for payments
       backgroundColor: "#C96868", // Background color for this category
     },
   ];
@@ -133,16 +133,6 @@ export default function HomeScreen() {
               >
                 <CategoryButtons categories={categories} />
               </ScrollView>
-
-              {/* Find MFU */}
-              <View style={{ marginHorizontal: 12 }}>
-                <BlurButton onPress={() => router.push(department)}>
-                  <Text style={styles.departmentText}>
-                    Find MFU Departments
-                  </Text>
-                  <Text style={styles.icon4}> {" > "} </Text>
-                </BlurButton>
-              </View>
 
               {/* Chat History */}
               <View style={{ marginHorizontal: 12 }}>
